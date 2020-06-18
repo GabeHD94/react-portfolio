@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PortfolioItem from "./portfolio-item";
+import { data } from "autoprefixer";
 
 export default class PortfolioContainer extends Component {
     constructor() {
@@ -15,6 +16,7 @@ export default class PortfolioContainer extends Component {
             ]
         };
         this.handleFilter = this.handleFilter.bind(this);
+        
     }
 
     handleFilter(filter) {
@@ -34,18 +36,23 @@ export default class PortfolioContainer extends Component {
     }
 
 
-    render() {
+    render() { 
+        
         if (this.state.isLoading) {
             return <div>Loading...</div>;
         }
-
+        
         return(
             <div>
+                
                 <h2>{this.state.pageTitle}</h2>
 
                 <button onClick={() => this.handleFilter('eCommerce')}>eCommerce</button>
                 <button onClick={() => this.handleFilter('Scheduling')}>Scheduling</button>
                 <button onClick={() => this.handleFilter('Enterprise')}>Enterprise</button>
+                <button onClick={() => this.handleFilter(data)}>Reveal</button>
+
+
 
 
                 {this.portfolioItem()}
