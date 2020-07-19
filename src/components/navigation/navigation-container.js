@@ -36,11 +36,11 @@ const NavigationComponent = props => {
       <div className="left-side">
         <div className="nav-link-wrapper">
           <NavLink exact to="/" activeClassName="nav-link-active">
-            Home
+            My Resume
           </NavLink>
         </div>
 
-        <div className="nav-link-wrapper">
+        {/* <div className="nav-link-wrapper">
           <NavLink to="/about-me" activeClassName="nav-link-active">
             About
           </NavLink>
@@ -56,7 +56,7 @@ const NavigationComponent = props => {
           <NavLink to="/blog" activeClassName="nav-link-active">
             Blog
           </NavLink>
-        </div> */}
+        </div> */} 
 
         {props.loggedInStatus === "LOGGED_IN" ? (
           dynamicLink("/portfolio-manager", "Portfolio Manager")
