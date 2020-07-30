@@ -1,3 +1,4 @@
+  
 import React, { Component } from "react";
 import axios from "axios";
 
@@ -13,9 +14,6 @@ export default class PortfolioManager extends Component {
       portfolioToEdit: {}
     };
 
-    this.handleNewFormSubmission = this.handleNewFormSubmission.bind(
-      this
-    );
     this.handleNewFormSubmission = this.handleNewFormSubmission.bind(this);
     this.handleEditFormSubmission = this.handleEditFormSubmission.bind(this);
     this.handleFormSubmissionError = this.handleFormSubmissionError.bind(this);

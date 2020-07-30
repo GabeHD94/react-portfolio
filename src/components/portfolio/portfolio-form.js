@@ -1,4 +1,3 @@
-  
 import React, { Component } from "react";
 import axios from "axios";
 import DropzoneComponent from "react-dropzone-component";
@@ -21,7 +20,7 @@ export default class PortfolioForm extends Component {
       logo: "",
       editMode: false,
       apiUrl: "https://gabesegura.devcamp.space/portfolio/portfolio_items",
-      apiAction: 'post'
+      apiAction: "post"
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -134,11 +133,11 @@ export default class PortfolioForm extends Component {
     axios({
       method: this.state.apiAction,
       url: this.state.apiUrl,
-      data:this.buildForm(),
+      data: this.buildForm(),
       withCredentials: true
     })
       .then(response => {
-        if(this.state.editMode) {
+        if (this.state.editMode) {
           this.props.handleEditFormSubmission();
         } else {
           this.props.handleNewFormSubmission(response.data.portfolio_item);
@@ -155,7 +154,7 @@ export default class PortfolioForm extends Component {
           logo: "",
           editMode: false,
           apiUrl: "https://gabesegura.devcamp.space/portfolio/portfolio_items",
-          apiAction: 'post'
+          apiAction: "post"
         });
 
         [this.thumbRef, this.bannerRef, this.logoRef].forEach(ref => {
